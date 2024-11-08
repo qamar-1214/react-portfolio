@@ -5,6 +5,10 @@ import About from "../pages/About.jsx";
 import Work from "../pages/Work.jsx";
 import Gallery from "../pages/Gallery.jsx";
 import Blog from "../pages/Blog.jsx";
+import AdaptiveDesignSystem from "../pages/AdaptiveDesignSystem.jsx";
+import NewMilestone from "../pages/NewMilestone.jsx";
+import DrwerRemains from "../pages/DrwerRemains.jsx";
+import AutomateDesign from "../pages/AutomateDesign.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,12 +28,29 @@ const router = createBrowserRouter([
         element: <Work />,
       },
       {
+        path: "work/adaptive-design-system-for-archlight",
+        element: <AdaptiveDesignSystem />,
+      },
+      {
+        path: "work/automate-design-handovers-with-a-figma-to-code-pipeline",
+        element: <AutomateDesign />,
+      },
+
+      {
         path: "gallery",
         element: <Gallery />,
       },
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "blog/new-milestone-in-my-career",
+        element: <NewMilestone />,
+      },
+      {
+        path: "blog/the-99-percent-that-remains-in-the-drawer",
+        element: <DrwerRemains />,
       },
     ],
   },

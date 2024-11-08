@@ -52,3 +52,18 @@
   transform: translateY(20px);
   transition: opacity 500ms, transform 500ms ease-in-out;
 }
+
+/* Custom style for pagination lines */
+.custom-line-pagination {
+  width: 30px; /* Custom width for pagination lines */
+  height: 2px; /* Custom height */
+  background-color: gray;
+  border-radius: 1px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active.custom-line-pagination {
+  background-color: white; /* Active line color */
+}
