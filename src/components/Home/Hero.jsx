@@ -15,7 +15,7 @@ const Hero = () => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true,
+      once: false,
     });
   }, []);
 
@@ -24,6 +24,7 @@ const Hero = () => {
       <h1
         data-aos="fade-right"
         data-aos-delay="400"
+        data-aos-once="false"
         className="text-4xl md:text-6xl inter-font font-[750] text-white"
       >
         Design engineer and builder

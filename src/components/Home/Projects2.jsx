@@ -77,32 +77,39 @@ const Projects2 = () => {
         <div className="flex flex-col w-full gap-20 md:gap-36 p-4 md:m-6 lg:m-9 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <h1
-              data-aos="fade-right"
-              data-aos-delay="400"
-              className="text-3xl lg:text-4xl inter-font font-[750] text-white"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-once="false"
+              className="text-3xl lg:text-3xl inter-font font-[750] text-white"
             >
               Automating <br /> Design Handovers <br /> with a Figma to Code
               Pipeline
             </h1>
             <div className="flex flex-col justify-start ">
-              <div className="relative">
+              <div className="mb-1">
                 <img
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-once="false"
                   src={avatar1}
                   alt="Left Avatar"
-                  className="w-8 h-8 rounded-full border border-gray-700 shadow-lg -mr-2 absolute    z-[100]"
-                />
-                <img
-                  src={avatar2}
-                  alt="Right Avatar"
-                  className="w-8 h-8 rounded-full border border-gray-700 shadow-lg ml-6"
+                  className="w-8 h-8 rounded-full border border-gray-700 shadow-lg "
                 />
               </div>
-              <p className="text-gray-300 text-[13px] mt-3">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
+                className="text-gray-300 text-[13px] mt-3"
+              >
                 Explore the enduring debate between using spaces and tabs for
                 code indentation, and why this choice matters more than you
                 might think.
               </p>
               <Link
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
                 to={
                   "/work/automate-design-handovers-with-a-figma-to-code-pipeline"
                 }

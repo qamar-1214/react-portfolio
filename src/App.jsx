@@ -3,6 +3,7 @@ import Background from "./components/Background/Background";
 import Navbar from "./components/Navbar/Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const App = () => {
             </CSSTransition>
           </TransitionGroup>
         </main>
+        <Footer />
       </div>
     </div>
   );

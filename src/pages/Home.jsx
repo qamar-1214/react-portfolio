@@ -4,6 +4,8 @@ import Hero from "../components/Home/Hero";
 import Projects from "../components/Home/Projects";
 import VideoSection from "../components/Home/VideoSection";
 import Projects2 from "../components/Home/Projects2";
+import NewsLetter from "../components/Home/NewsLetter";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -13,6 +15,7 @@ const Home = () => {
       <Projects />
       <VideoSection />
       <Projects2 />
+      <NewsLetter />
     </div>
   );
 };

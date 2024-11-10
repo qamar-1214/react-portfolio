@@ -12,6 +12,9 @@ const VideoSection = () => {
         {/* Video Section */}
         <div className="w-full relative overflow-hidden rounded-2xl">
           <video
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-once="false"
             src={video} // Replace with the path to your video
             autoPlay
             loop
@@ -23,8 +26,9 @@ const VideoSection = () => {
         {/* Content Section */}
         <div className=" w-full p-4 md:p-8 ">
           <h1
-            data-aos="fade-right"
-            data-aos-delay="400"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-once="false"
             className="text-3xl lg:text-3xl inter-font font-[750] text-white "
           >
             Simple portfolio creator built with Once UI and Next.js

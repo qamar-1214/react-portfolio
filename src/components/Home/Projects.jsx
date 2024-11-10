@@ -39,11 +39,7 @@ const Projects = () => {
   };
 
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-delay="400"
-      className="flex flex-col items-center justify-center my-16 px-5 md:px-16 w-full opacity-85"
-    >
+    <div className="flex flex-col items-center justify-center my-16 px-5 md:px-16 w-full opacity-85">
       <div className="w-full lg:max-w-[870px] mx-auto">
         <div
           onClick={handleImageClick}
@@ -60,7 +56,12 @@ const Projects = () => {
 
         {/* Custom line indicator */}
         {projectImages.length > 1 && (
-          <div className="flex  gap-1 px-4 justify-start mt-4 w-full">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-once="false"
+            className="flex  gap-1 px-4 justify-start mt-4 w-full"
+          >
             {projectImages.map((_, index) => (
               <div
                 key={index}
@@ -77,8 +78,9 @@ const Projects = () => {
         <div className="flex flex-col w-full gap-20 md:gap-36 p-4 md:m-6 lg:m-9 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <h1
-              data-aos="fade-right"
-              data-aos-delay="400"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-once="false"
               className="text-3xl lg:text-4xl inter-font font-[750] text-white"
             >
               Building an adaptive design system for Archlight
@@ -86,22 +88,36 @@ const Projects = () => {
             <div className="flex flex-col justify-start ">
               <div className="relative">
                 <img
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-once="false"
                   src={avatar1}
                   alt="Left Avatar"
                   className="w-8 h-8 rounded-full border border-gray-700 shadow-lg -mr-2 absolute    z-[100]"
                 />
                 <img
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-once="false"
                   src={avatar2}
                   alt="Right Avatar"
                   className="w-8 h-8 rounded-full border border-gray-700 shadow-lg ml-6"
                 />
               </div>
-              <p className="text-gray-300 text-[13px] mt-3">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
+                className="text-gray-300 text-[13px] mt-3"
+              >
                 In this project, I developed a flexible and scalable design
                 system using Next.js for front-end development and Figma for
                 design collaboration.
               </p>
               <Link
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
                 to={"/work/adaptive-design-system-for-archlight"}
                 className="relative flex items-center   mt-3 group "
               >
@@ -116,7 +132,13 @@ const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
             {/* First Item with Link */}
             <div className="relative flex flex-col items-start w-full group cursor-pointer">
-              <Link to="/blog/new-milestone-in-my-career" className="relative">
+              <Link
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
+                to="/blog/new-milestone-in-my-career"
+                className="relative"
+              >
                 <div className="w-[1.5px] bg-gray-800 h-5 absolute -left-8 top-1/2 transform -translate-y-1/2 group-hover:rotate-90 transition-all duration-500 ease-in-out"></div>
                 <div className=" group-hover:pl-5 transition-all duration-500 ease-in-out">
                   <h2 className="text-white text-2xl font-semibold mb-2">
@@ -130,6 +152,9 @@ const Projects = () => {
             {/* Second Item with Link */}
             <div className="relative flex flex-col items-start w-full group cursor-pointer md:pl-16">
               <Link
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-once="false"
                 to="/blog/the-99-percent-that-remains-in-the-drawer"
                 className="relative"
               >
