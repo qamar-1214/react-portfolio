@@ -7,3 +7,5 @@ export const navLinks = [
   { path: "/blog", label: "Blog", icon: <FaBlog /> },
   { path: "/gallery", label: "Gallery", icon: <FaImages /> },
 ];
+
+export const AboutContent = [];

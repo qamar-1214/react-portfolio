@@ -2,7 +2,7 @@ import React from "react";
 import avatar from "../../assets/avatar.jpg";
 const AvatarSection = () => {
   return (
-    <section className="flex flex-col items-center space-y-3">
+    <section className="flex flex-col  space-y-6 items-center  text-center md:text-start  justify-center md:justify-start">
       {/* Avatar */}
       <div className="overflow-hidden">
         <img

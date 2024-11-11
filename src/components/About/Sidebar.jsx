@@ -1,46 +1,60 @@
-// src/components/Sidebar.js
 import React from "react";
 
 const Sidebar = () => {
-  // Define main links with optional sub-links
   const links = [
-    { title: "Introduction", subLinks: [] },
-    { title: "Work Experience", subLinks: ["FLY", "Creativ3"] },
+    { id: "introduction", title: "Introduction", subLinks: [] },
     {
-      title: "Studies",
-      subLinks: ["University of Jakarta", "Build the Future"],
+      id: "experience",
+      title: "Work Experience",
+      subLinks: [
+        { id: "fly", title: "FLY" },
+        { id: "creative3", title: "Creative3" },
+      ],
     },
-    { title: "Technical skills", subLinks: ["Figma", "Next.js"] },
+    {
+      id: "studies",
+      title: "Studies",
+      subLinks: [
+        { id: "univeristy", title: "University of Jakarta" },
+        { id: "future", title: "Build the Future" },
+      ],
+    },
+    {
+      id: "skills",
+      title: "Technical skills",
+      subLinks: [
+        { id: "figma", title: "Figma" },
+        { id: "next", title: "Next.js" },
+      ],
+    },
   ];
 
   return (
-    <aside className="w-full hidden lg:block max-w-56 text-white ">
+    <aside className="fixed hidden md:block top-20 left-0 h-full max-w-62  text-white mt-3 p-4">
       <ul className="space-y-6">
         {links.map((link, index) => (
           <li key={index}>
-            {/* Main Link */}
             <a
-              className="flex items-center space-x-3 hover:pl-1.5 transition-all duration-500 ease-in-out "
-              href="#"
+              className="flex items-center space-x-3 hover:pl-1.5 transition-all duration-500 ease-in-out"
+              href={`#${link.id}`}
             >
-              <div className="w-4 h-[0.5px] bg-gray-600 "></div>
+              <div className="w-4 h-[0.5px] bg-gray-600"></div>
               <span className="text-white font-[500] text-[15px]">
                 {link.title}
               </span>
             </a>
 
-            {/* Sub-links (only if present) */}
             {link.subLinks.length > 0 && (
               <ul className="ml-8 mt-1 space-y-2">
                 {link.subLinks.map((subLink, subIndex) => (
                   <li key={subIndex}>
                     <a
-                      href="#"
+                      href={`#${subLink.id}`}
                       className="flex items-center space-x-3 hover:pl-1.5 transition-all duration-500 ease-in-out"
                     >
-                      <div className="w-2 h-[0.5px] bg-gray-600 "></div>
+                      <div className="w-2 h-[0.5px] bg-gray-600"></div>
                       <span className="text-white font-[500] text-[15px]">
-                        {subLink}
+                        {subLink.title}
                       </span>
                     </a>
                   </li>

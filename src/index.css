@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
 /* Inter font */
 .inter-font {
   font-family: "Inter", sans-serif;
