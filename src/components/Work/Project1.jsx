@@ -4,10 +4,18 @@ import { HiOutlineChevronRight } from "react-icons/hi2";
 import avatar1 from "../../assets/avatar.jpg";
 import avatar2 from "../../assets/avatars/avatar-01.png";
 import { Link } from "react-router-dom";
+import Aos from "aos";
 
-const Projects = () => {
+const Project1 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -39,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center my-16 px-5 md:px-16 w-full opacity-85">
+    <div className="flex flex-col items-center justify-center my-8 md:my-16 px-5 md:px-16 w-full opacity-85">
       <div className="w-full lg:max-w-[870px] mx-auto">
         <div
           onClick={handleImageClick}
@@ -56,17 +64,12 @@ const Projects = () => {
 
         {/* Custom line indicator */}
         {projectImages.length > 1 && (
-          <div
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-once="false"
-            className="flex  gap-1 px-4 justify-start mt-4 w-full"
-          >
+          <div className="flex  gap-1 px-4 justify-start mt-4 w-full">
             {projectImages.map((_, index) => (
               <div
                 key={index}
                 onClick={() => handleControlClick(index)}
-                className={`cursor-pointer w-full sm:w-24 h-[2px] rounded transition-all ${
+                className={`cursor-pointer w-full  h-[2px] rounded transition-all ${
                   activeIndex === index ? "bg-white" : "bg-[rgba(40,40,40,0.9)]"
                 }`}
               ></div>
@@ -75,13 +78,13 @@ const Projects = () => {
         )}
 
         {/* content */}
-        <div className="flex flex-col w-full gap-20 md:gap-36 p-4 md:m-6 lg:m-9 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col w-full  p-4 mt-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <h1
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-once="false"
-              className="text-3xl lg:text-4xl inter-font font-[750] text-white"
+              className="text-2xl lg:text-2xl inter-font font-[750] text-white"
             >
               Building an adaptive design system for Archlight
             </h1>
@@ -129,49 +132,10 @@ const Projects = () => {
               </Link>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-            {/* First Item with Link */}
-            <div className="relative flex flex-col items-start w-full group cursor-pointer">
-              <Link
-                data-aos="fade-up"
-                data-aos-delay="500"
-                data-aos-once="false"
-                to="/blog/new-milestone-in-my-career"
-                className="relative"
-              >
-                <div className="w-[1.5px] bg-gray-800 h-5 absolute -left-8 top-1/2 transform -translate-y-1/2 group-hover:rotate-90 transition-all duration-500 ease-in-out"></div>
-                <div className=" group-hover:pl-5 transition-all duration-500 ease-in-out">
-                  <h2 className="text-white text-2xl font-semibold mb-2">
-                    Arriving to a new <br /> milestone in my career
-                  </h2>
-                  <p className="text-gray-400 text-base">April 8, 2024</p>
-                </div>
-              </Link>
-            </div>
-
-            {/* Second Item with Link */}
-            <div className="relative flex flex-col items-start w-full group cursor-pointer md:pl-16">
-              <Link
-                data-aos="fade-up"
-                data-aos-delay="500"
-                data-aos-once="false"
-                to="/blog/the-99-percent-that-remains-in-the-drawer"
-                className="relative"
-              >
-                <div className="w-[1.5px] bg-gray-800 h-5 absolute -left-8 top-1/2 transform -translate-y-1/2 group-hover:rotate-90 transition-all duration-500 ease-in-out"></div>
-                <div className=" group-hover:pl-5 transition-all duration-500 ease-in-out">
-                  <h2 className="text-white text-2xl font-semibold mb-2">
-                    The 99% that <br /> remains in the drawer
-                  </h2>
-                  <p className="text-gray-400 text-base">March 5, 2024</p>
-                </div>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default Project1;

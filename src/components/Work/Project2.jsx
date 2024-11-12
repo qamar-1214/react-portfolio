@@ -1,7 +1,7 @@
 import React from "react";
 import video from "../../assets/projects/video-01.mp4";
 
-const VideoSection = () => {
+const Project2 = () => {
   return (
     <div
       data-aos="fade-up"
@@ -39,4 +39,4 @@ const VideoSection = () => {
   );
 };
 
-export default VideoSection;
+export default Project2;

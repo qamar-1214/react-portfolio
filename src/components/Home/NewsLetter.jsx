@@ -5,7 +5,6 @@ const NewsLetter = () => {
     <section
       data-aos="fade-up"
       data-aos-delay="500"
-      data-aos-once="false"
       className="relative z-50 mx-2 sm:mx-6 lg:mx-16  md:mb-12 p-8 md:py-16 my-8 bg-black border border-gray-700 flex items-center justify-center rounded-xl overflow-hidden"
     >
       <Background1 /> {/* Background is now an absolutely positioned element */}
@@ -14,7 +13,6 @@ const NewsLetter = () => {
         <h2
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="false"
           className="text-3xl font-bold text-white"
         >
           Subscribe to Selene's Newsletter
@@ -24,7 +22,6 @@ const NewsLetter = () => {
         <p
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="false"
           className="text-gray-100 text-[15px] "
         >
           I occasionally write about design, technology, and share
@@ -36,7 +33,6 @@ const NewsLetter = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="500"
-          data-aos-once="false"
           className="flex items-center justify-center gap-3 mt-4"
         >
           <input

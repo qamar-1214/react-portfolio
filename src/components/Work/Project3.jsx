@@ -4,7 +4,7 @@ import { HiOutlineChevronRight } from "react-icons/hi2";
 import avatar1 from "../../assets/avatar.jpg";
 import { Link } from "react-router-dom";
 
-const Projects2 = () => {
+const Project3 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -41,7 +41,7 @@ const Projects2 = () => {
     <div
       data-aos="fade-up"
       data-aos-delay="400"
-      className="flex flex-col items-center justify-center my-5 md:my-16 px-5 md:px-16 w-full opacity-85"
+      className="flex flex-col items-center justify-center py-8 md:py-16 px-5 md:px-16 w-full opacity-85"
     >
       <div className="w-full lg:max-w-[870px] mx-auto">
         <div
@@ -64,7 +64,7 @@ const Projects2 = () => {
               <div
                 key={index}
                 onClick={() => handleControlClick(index)}
-                className={`cursor-pointer w-full sm:w-24 h-[2px] rounded transition-all ${
+                className={`cursor-pointer w-full  h-[2px] rounded transition-all ${
                   activeIndex === index ? "bg-white" : "bg-[rgba(40,40,40,0.9)]"
                 }`}
               ></div>
@@ -73,16 +73,15 @@ const Projects2 = () => {
         )}
 
         {/* content */}
-        <div className="flex flex-col w-full gap-20 md:gap-36 p-4 md:m-6 lg:m-9 ">
+        <div className="flex flex-col w-full gap-20 md:gap-36 p-4 mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <h1
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-once="false"
-              className="text-3xl lg:text-3xl inter-font font-[750] text-white"
+              className="text-2xl inter-font font-[750] text-white"
             >
-              Automating <br /> Design Handovers <br /> with a Figma to Code
-              Pipeline
+              Automating Design Handovers with a Figma to Code Pipeline
             </h1>
             <div className="flex flex-col justify-start ">
               <div className="mb-1">
@@ -128,4 +127,4 @@ const Projects2 = () => {
   );
 };
 
-export default Projects2;
+export default Project3;

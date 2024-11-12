@@ -84,25 +84,23 @@ const Technicalskills = () => {
         <div className="flex flex-col sm:flex-row gap-4">
           {images.slice(2).map((src, index) => (
             <div
-              key={index}
-              onClick={() => handleImageClick(index)}
+              key={index + 2} // Add offset to avoid index overlap
+              onClick={() => handleImageClick(index + 2)}
               className={`mt-6 max-w-60 h-32 relative rounded-lg cursor-pointer border border-gray-700 ${
-                zoomedImageIndex === index ? "z-50" : ""
+                zoomedImageIndex === index + 2 ? "z-50" : ""
               }`}
             >
-              {/* Image with conditional zoom styles */}
               <img
                 src={src}
-                alt={`Technical skill image ${index + 1}`}
+                alt={`Technical skill image ${index + 3}`}
                 className={`transition-transform duration-500 ease-in-out ${
-                  zoomedImageIndex === index
+                  zoomedImageIndex === index + 2
                     ? "w-[70%] h-auto fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-125 z-50"
                     : "w-full h-full object-cover rounded-lg"
                 }`}
                 style={{ transformOrigin: "center center" }}
               />
-              {/* Overlay background only visible when zoomed */}
-              {zoomedImageIndex === index && (
+              {zoomedImageIndex === index + 2 && (
                 <div className="absolute inset-0 bg-transparent bg-opacity-70 z-40" />
               )}
             </div>

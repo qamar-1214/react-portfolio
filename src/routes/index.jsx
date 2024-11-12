@@ -9,6 +9,7 @@ import AdaptiveDesignSystem from "../pages/AdaptiveDesignSystem.jsx";
 import NewMilestone from "../pages/NewMilestone.jsx";
 import DrwerRemains from "../pages/DrwerRemains.jsx";
 import AutomateDesign from "../pages/AutomateDesign.jsx";
+import DesignEngineering from "../pages/DesignEngineering.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "blog/the-99-percent-that-remains-in-the-drawer",
         element: <DrwerRemains />,
+      },
+      {
+        path: "blog/the-rise-of-design-engineering",
+        element: <DesignEngineering />,
       },
     ],
   },
