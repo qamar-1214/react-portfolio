@@ -57,15 +57,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full flex z-50 transition-all bg-transparent duration-300 items-center justify-between px-4 opacity-[30px]  shadow-2xl text-white  ${
+      className={`fixed top-0 w-full flex z-50 transition-all bg-transparent duration-300 items-center justify-between px-4 opacity-100   text-white  ${
         isSticky ? " py-2" : " py-[23px]"
       }`}
     >
       <div className="inter-font text-[12px] tracking-wider hidden md:block">
         Asia/Jakarta
       </div>
+
       <div
-        className={`bg-[rgba(0,0,0,0.6)] md:static md:mx-auto md:flex md:justify-center fixed bottom-8 left-1/2 transform md:transform-none -translate-x-1/2 p-[4px] rounded-[16px] border-[0.1px] border-gray-700  ${"flex items-center space-x-1 md:w-auto w-max"}`}
+        className={`bg-[rgba(0,0,0,0.5)]  backdrop-blur-xl md:static md:mx-auto md:flex md:justify-center fixed bottom-8 left-1/2 transform md:transform-none -translate-x-1/2 p-[4px] rounded-[16px] border-[0.1px] border-gray-700  flex items-center space-x-1 md:w-auto w-max`}
       >
         {navLinks.map((link, index) => (
           <Link
@@ -78,7 +79,7 @@ const Navbar = () => {
             } ${
               active !== link.label &&
               "hover:outline outline-gray-700 hover:bg-[rgba(48,48,48,0.4)]"
-            } flex items-center justify-center space-x-2   px-[14px] py-[6px] md:py-[3px] rounded-[11px]  `}
+            } flex items-center justify-center space-x-2   px-[14px] py-[6px] md:py-[3px] rounded-[11px]`}
             style={active !== link.label ? { outlineWidth: "0.4px" } : {}}
             onClick={() => setActive(link.label)}
           >
@@ -89,7 +90,10 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <div className="text-[13px] hidden md:block">{currentTime}</div>
+
+      <div className="text-[13px] w-[50px] hidden md:block text-center">
+        {currentTime}
+      </div>
     </nav>
   );
 };

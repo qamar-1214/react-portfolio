@@ -30,7 +30,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="fixed hidden md:block top-20 left-0 h-full max-w-62  text-white mt-3 p-4">
+    <aside className="fixed hidden md:block top-20 left-0 h-full max-w-62 transition-all duration-300 ease-in-out  text-white mt-3 p-4">
       <ul className="space-y-6">
         {links.map((link, index) => (
           <li key={index}>
