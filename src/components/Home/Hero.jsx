@@ -4,9 +4,11 @@ import avatarImage from "../../assets/avatar.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import { HomePageContent } from "../../constants";
 
 const Hero = () => {
   const navigate = useNavigate();
+  const heroContent = HomePageContent.hero;
   //handle click event
   const handleClick = () => {
     navigate("/about");
@@ -27,19 +29,14 @@ const Hero = () => {
         data-aos-once="false"
         className="text-4xl md:text-6xl inter-font font-[750] text-white"
       >
-        Design engineer and builder
+        {heroContent.heading}
       </h1>
       <p
         data-aos="fade-right"
         data-aos-delay="700"
         className="text-gray-300 text-md sm:text-lg tracking-[0.5px]"
       >
-        I'm Selene, a design engineer at
-        <span className="px-[4px] py-[1px] text-sm bg-[rgba(45,45,45,0.3)] rounded-[7px] border border-gray-700 mx-1">
-          FLY
-        </span>
-        , where I craft intuitive user experiences. After hours, I build my own
-        projects.
+        {heroContent.text}
       </p>
       <button
         data-aos="fade-right"
@@ -52,7 +49,7 @@ const Hero = () => {
           alt="Avatar"
           className="w-8 h-8 rounded-full border border-gray-700"
         />
-        <span className="text-sm font-bold text-white">About me</span>
+        <span className="text-sm font-bold text-white">{heroContent.btn}</span>
         <HiOutlineChevronRight className="text-white font-semibold text-2xl pr-2" />
       </button>
     </section>

@@ -1,14 +1,17 @@
 import React from "react";
-import Project1 from "../components/Work/Project1";
-import Project2 from "../components/Work/Project2";
-import Project3 from "../components/Work/Project3";
-
+import Projects from "../components/Common/Projects";
+import {
+  workProjects1Content,
+  workProjects2Content,
+  workVideoContent,
+} from "../constants";
+import Video from "../components/Common/Video";
 const Work = () => {
   return (
-    <div className="flex flex-col     lg:px-8 md:pt-8 ">
-      <Project1 />
-      <Project2 />
-      <Project3 />
+    <div className="flex flex-col lg:px-8 md:pt-16 ">
+      <Projects content={workProjects1Content} />
+      <Video content={workVideoContent} />
+      <Projects content={workProjects2Content} />
     </div>
   );
 };

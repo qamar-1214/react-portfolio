@@ -1,41 +1,34 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { footerContent } from "../../constants";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row items-center justify-between w-full lg:px-20 p-4 mb-20 md:mb-0  text-gray-100">
-      {/* Left side text */}
+    <footer className="flex flex-col md:flex-row items-center justify-between w-full lg:px-20 p-4 mb-20 md:mb-0 text-gray-100">
       <div className="text-center md:text-left mb-4 md:mb-0">
-        <p>© 2024 /Selene Yu/ Build your portfolio with Once UI</p>
+        <p>{footerContent.copyrightText}</p>
       </div>
 
-      {/* Right side icons */}
       <div className="flex gap-6">
-        <a
-          href="https://github.com/once-ui-system/nextjs-starter"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="hover:text-white transition duration-300"
-        >
-          <FaGithub size={20} />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/once-ui/posts/?feedView=all"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="hover:text-white transition duration-300"
-        >
-          <FaLinkedin size={20} />
-        </a>
-        <a
-          href="mailto:example@gmail.com"
-          aria-label="Email"
-          className="hover:text-white transition duration-300"
-        >
-          <FaEnvelope size={20} />
-        </a>
+        {footerContent.socialLinks.map((link, index) => {
+          const iconMap = {
+            FaGithub: <FaGithub size={20} />,
+            FaLinkedin: <FaLinkedin size={20} />,
+            FaEnvelope: <FaEnvelope size={20} />,
+          };
+          return (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+              className="hover:text-white transition duration-300"
+            >
+              {iconMap[link.icon]}
+            </a>
+          );
+        })}
       </div>
     </footer>
   );

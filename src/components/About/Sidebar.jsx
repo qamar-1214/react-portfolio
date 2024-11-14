@@ -1,38 +1,12 @@
 import React from "react";
+import { aboutContent } from "../../constants";
 
 const Sidebar = () => {
-  const links = [
-    { id: "introduction", title: "Introduction", subLinks: [] },
-    {
-      id: "experience",
-      title: "Work Experience",
-      subLinks: [
-        { id: "fly", title: "FLY" },
-        { id: "creative3", title: "Creative3" },
-      ],
-    },
-    {
-      id: "studies",
-      title: "Studies",
-      subLinks: [
-        { id: "univeristy", title: "University of Jakarta" },
-        { id: "future", title: "Build the Future" },
-      ],
-    },
-    {
-      id: "skills",
-      title: "Technical skills",
-      subLinks: [
-        { id: "figma", title: "Figma" },
-        { id: "next", title: "Next.js" },
-      ],
-    },
-  ];
-
+  const sidebarLinks = aboutContent.sidebarLinks;
   return (
-    <aside className="fixed hidden md:block top-20 left-0 h-full max-w-62 transition-all duration-300 ease-in-out  text-white mt-3 p-4">
+    <aside className="fixed hidden md:block top-20 left-0 h-full max-w-62 transition-all duration-300 ease-in-out text-white mt-3 p-4">
       <ul className="space-y-6">
-        {links.map((link, index) => (
+        {sidebarLinks.map((link, index) => (
           <li key={index}>
             <a
               className="flex items-center space-x-3 hover:pl-1.5 transition-all duration-500 ease-in-out"

@@ -1,10 +1,8 @@
 const Background1 = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Red highlight positioned at the top-right corner */}
       <div className="absolute top-0 right-0 w-[400px] h-[200px] bg-[#721515] opacity-60 rounded-full blur-[80px] pointer-events-none" />
 
-      {/* Diagonal lines effect */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
